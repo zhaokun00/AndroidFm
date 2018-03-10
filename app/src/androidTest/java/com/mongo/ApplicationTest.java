@@ -1,4 +1,4 @@
-package com.mongoandroidfm;
+package com.mongo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
