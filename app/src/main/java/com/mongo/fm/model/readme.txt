@@ -1,0 +1,1 @@
+功能:定定义model(数据结构以及getter/setter、compareTo、equals等),不含复制操作以及modelHelper(提供便于操作的model的api)

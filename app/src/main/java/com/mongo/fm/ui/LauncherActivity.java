@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.Toast;
 
 import com.mongo.fm.R;
 
@@ -21,33 +20,36 @@ import com.mongo.fm.R;
  
 public class LauncherActivity extends Activity {
 
+    private Handler mHandler;
+    private int mDelayTime = 2000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) { //onCreate方法执行的时机是在主线程中执行的
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
-        //适应场景:只执行一次发送消息的操作
-        Handler handler = new Handler();
+        mHandler = new Handler();
 
-        //第一步:发送消息,可以立即发送消息,也可以延时发送消息
-        handler.postDelayed(new Runnable() {
-            //第二步:写发送消息的具体操作
+        mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                //该函数的执行是在主线程中执行的
-                Toast.makeText(LauncherActivity.this,"Hello World",Toast.LENGTH_LONG).show();
+                startMainActivity();
             }
-        },2000);
-
-
+        },mDelayTime); //延时mDelayTime时间跳转到主界面
     }
 
     private void startMainActivity() {
 
         Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent); //跳转到主页面
 
-        startActivity(intent);
-
+        finish(); //销毁该Activity
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        mHandler.removeCallbacks(null);
+    }
 }
