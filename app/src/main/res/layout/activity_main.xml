@@ -3,21 +3,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                tools:context="com.mongo.fm.ui.MainActivity">
+                tools:context="com.mongo.fm.ui.activity.MainActivity">
 
     <!--包含一个布局文件,该布局文件为自定义的布局文件-->
     <include layout="@layout/titlebar"></include>
 
     <!--在Acitivty中嵌入fragment时,fragment必须在FrameLayout布局文件-->
     <FrameLayout
+        android:id="@+id/fl_content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         >
     </FrameLayout>
 
-    
     <RadioGroup
+        android:id="@+id/rg_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#11000000"
@@ -26,21 +27,25 @@
 
         <!--将共同的样式单独抽取出来,组成一个样式文件,在styles.xml文件中进行定义-->
         <RadioButton
+            android:id="@+id/rb_home"
             style="@style/style_bottom"
             android:drawableTop="@drawable/drawable_rb_home_selector"
             android:text="常用框架"
             />
         <RadioButton
+            android:id="@+id/rb_third"
             style="@style/style_bottom"
             android:drawableTop="@drawable/drawable_rb_third_selector"
             android:text="第三方"
             />
         <RadioButton
+            android:id="@+id/rb_customer"
             style="@style/style_bottom"
             android:drawableTop="@drawable/drawable_rb_customer_selector"
             android:text="自定义控件"
             />
         <RadioButton
+            android:id="@+id/rb_other"
             style="@style/style_bottom"
             android:drawableTop="@drawable/drawable_rb_other_selector"
             android:text="其他"

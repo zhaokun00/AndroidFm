@@ -1,4 +1,4 @@
-package com.mongo.fm.ui;
+package com.mongo.fm.ui.activity;
 
 import android.app.Activity;
 import android.content.Intent;
