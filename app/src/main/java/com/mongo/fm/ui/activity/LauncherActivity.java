@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.mongo.fm.R;
+import com.zhy.http.okhttp.OkHttpUtils;
 
 /*
  **************************************************************************************
@@ -40,6 +41,7 @@ public class LauncherActivity extends Activity {
 
     private void startMainActivity() {
 
+
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent); //跳转到主页面
 
@@ -51,5 +53,10 @@ public class LauncherActivity extends Activity {
         super.onDestroy();
 
         mHandler.removeCallbacks(null);
+    }
+
+    private void getDataFromGet() {
+
+        OkHttpUtils ok;
     }
 }

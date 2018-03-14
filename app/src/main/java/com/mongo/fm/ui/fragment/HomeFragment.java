@@ -1,10 +1,12 @@
 package com.mongo.fm.ui.fragment;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.mongo.fm.R;
+import com.mongo.fm.ui.activity.OkHttpActivity;
 import com.mongo.fm.ui.adapter.HomeFragmentAdapter;
 
 /*
@@ -33,7 +35,14 @@ public class HomeFragment extends BaseFragment {
         mlv_frameItem.setOnItemClickListener(new AdapterView.OnItemClickListener() { //设置listview条目单击事件
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                String data = mData[position].toLowerCase(); //将字符串全部转换为小写字符串
+                Intent intent = null;
+                switch(data) {
+                    case "okhttp":
+                        intent = new Intent(mContext, OkHttpActivity.class);
+                        startActivity(intent);
+                        break;
+                }
             }
         });
         return v;

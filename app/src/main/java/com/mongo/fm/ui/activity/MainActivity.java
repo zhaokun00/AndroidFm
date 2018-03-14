@@ -30,7 +30,7 @@ import java.util.List;
 public class MainActivity extends FragmentActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private RadioGroup mRgContent;
+    private RadioGroup mRg_content;
     private List<BaseFragment> mListFragment;
     private BaseFragment mOldFragment;
     private static final int POSITION_HOME = 0;
@@ -47,7 +47,7 @@ public class MainActivity extends FragmentActivity {
 
     private void initView() {
         setContentView(R.layout.activity_main);
-        mRgContent = (RadioGroup) findViewById(R.id.rg_content);
+        mRg_content = (RadioGroup) findViewById(R.id.rg_content);
     }
 
     private void initData() {
@@ -61,8 +61,8 @@ public class MainActivity extends FragmentActivity {
         mListFragment.add(new OtherFragment());
 
         //RadioGroup设置选择监听,用户需要重写当选中某一项时的回调方法
-        mRgContent.setOnCheckedChangeListener(new RgContentListener());
-        mRgContent.check(R.id.rb_home); //最开始时没有被选中的项,当调用该函数时会使某一项被选中,会导致调用RadioGroup.OnCheckedChangeListener里面的方法,如果直接在xml文件中设置 android:checked="true"该属性,不会调用RadioGroup.OnCheckedChangeListener里面的方法
+        mRg_content.setOnCheckedChangeListener(new RgContentListener());
+        mRg_content.check(R.id.rb_home); //最开始时没有被选中的项,当调用该函数时会使某一项被选中,会导致调用RadioGroup.OnCheckedChangeListener里面的方法,如果直接在xml文件中设置 android:checked="true"该属性,不会调用RadioGroup.OnCheckedChangeListener里面的方法
     }
 
     private class RgContentListener implements RadioGroup.OnCheckedChangeListener {

@@ -4,7 +4,6 @@ import android.text.format.Time;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 /*
  **************************************************************************************
  * company    : 
@@ -24,7 +23,6 @@ public class TimeUtils {
       Return:返回
     */
     public static long getTimeMillis() {
-
         return System.currentTimeMillis(); //获取系统时间,返回时间的单位位ms
     }
 
