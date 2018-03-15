@@ -8,5 +8,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_ok_http">OkHttpActivity</string>
+    <string name="title_activity_buffer_knife">BufferKnifeActivity</string>
+    <string name="title_activity_native_json">NativeJsonActivity</string>
+    <string name="title_activity_gson">GsonActivity</string>
+    <string name="title_activity_fast_json">FastJsonActivity</string>
 
 </resources>

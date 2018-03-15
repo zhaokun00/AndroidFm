@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.mongo.fm.ui.activity.FastJsonActivity">
+
+    <Button
+        android:id="@+id/btn_transfer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="字符串转为json对象"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_transfer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="字符串转为list对象"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_transfer3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="java对象转为json字符串"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_transfer4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="java的list对象转为json字符串"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -465,8 +465,5 @@ public class OkHttpActivity extends Activity {
             mtv_data.setText(s);
         }
     };
-
-
-
 }
 

@@ -6,6 +6,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.mongo.fm.R;
+import com.mongo.fm.ui.activity.FastJsonActivity;
+import com.mongo.fm.ui.activity.GsonActivity;
+import com.mongo.fm.ui.activity.NativeJsonActivity;
 import com.mongo.fm.ui.activity.OkHttpActivity;
 import com.mongo.fm.ui.adapter.HomeFragmentAdapter;
 
@@ -23,7 +26,7 @@ public class HomeFragment extends BaseFragment {
 
     private static final String TAG = HomeFragment.class.getSimpleName();
     private ListView mlv_frameItem;
-    private static final String[] mData = new String[]{"OKHttp", "xUtils3","Retrofit2","Fresco","Glide","greenDao","RxJava","volley","Gson","FastJson","picasso","evenBus","jcvideoplayer","pulltorefresh","Expandablelistview","UniversalVideoView"};
+    private static final String[] mData = new String[]{"OkHttp","NativeJson","Gson","FastJson","xUtils3","Retrofit2","Fresco","Glide","greenDao","RxJava","volley","picasso","evenBus","jcvideoplayer","pulltorefresh","Expandablelistview","UniversalVideoView"};
     private HomeFragmentAdapter mHomeAdapter;
 
     @Override
@@ -35,13 +38,25 @@ public class HomeFragment extends BaseFragment {
         mlv_frameItem.setOnItemClickListener(new AdapterView.OnItemClickListener() { //设置listview条目单击事件
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String data = mData[position].toLowerCase(); //将字符串全部转换为小写字符串
+                String data = mData[position];
                 Intent intent = null;
                 switch(data) {
-                    case "okhttp":
+                    case "OkHttp":
                         intent = new Intent(mContext, OkHttpActivity.class);
-                        startActivity(intent);
                         break;
+                    case "NativeJson":
+                        intent = new Intent(mContext, NativeJsonActivity.class);
+                        break;
+                    case "Gson":
+                        intent = new Intent(mContext, GsonActivity.class);
+                        break;
+                    case "FastJson":
+                        intent = new Intent(mContext, FastJsonActivity.class);
+                        break;
+                }
+
+                if(intent != null) {
+                    startActivity(intent);
                 }
             }
         });

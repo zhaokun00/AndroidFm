@@ -3,9 +3,9 @@
     package="com.mongo.fm" >
 
     <!-- 使用网络时需要添加的权限 -->
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -38,6 +38,22 @@
         <activity
             android:name=".ui.activity.OkHttpActivity"
             android:label="@string/title_activity_ok_http" >
+        </activity>
+        <activity
+            android:name=".ui.activity.BufferKnifeActivity"
+            android:label="@string/title_activity_buffer_knife" >
+        </activity>
+        <activity
+            android:name=".ui.activity.NativeJsonActivity"
+            android:label="@string/title_activity_native_json" >
+        </activity>
+        <activity
+            android:name=".ui.activity.GsonActivity"
+            android:label="@string/title_activity_gson" >
+        </activity>
+        <activity
+            android:name=".ui.activity.FastJsonActivity"
+            android:label="@string/title_activity_fast_json" >
         </activity>
     </application>
 
